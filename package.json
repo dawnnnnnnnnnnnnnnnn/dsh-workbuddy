@@ -1,0 +1,73 @@
+﻿{
+  "name": "dsh-workbuddy",
+  "version": "0.3.0",
+  "description": "WorkBuddy workbench for DSH 鈥?a right-sidebar panel plus agent tools that hand tasks to the WorkBuddy desktop app running on this machine",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "panel",
+    "locale",
+    "client.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "workbuddy",
+    "codebuddy",
+    "agent",
+    "delegate",
+    "acp",
+    "sidebar-panel"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-sidebar-right"
+      ]
+    },
+    "compatibility": {
+      "dshReleases": {
+        "0.2.1-rc.2": "compatible"
+      },
+      "note": "Developed and verified against DSH 0.2.1-rc.2 on Windows 11 with WorkBuddy 5.9.3. Older releases have not been tested."
+    }
+  },
+  "os": [
+    "win32"
+  ],
+  "engines": {
+    "dsh": ">=0.2.0-rc.2 <0.3.0",
+    "node": ">=20"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "YG"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dawnnnnnnnnnnnnnnnn/dsh-workbuddy.git"
+  },
+  "homepage": "https://github.com/dawnnnnnnnnnnnnnnnn/dsh-workbuddy#readme",
+  "bugs": {
+    "url": "https://github.com/dawnnnnnnnnnnnnnnnn/dsh-workbuddy/issues"
+  }
+}

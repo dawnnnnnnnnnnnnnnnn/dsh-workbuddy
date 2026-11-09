@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "WorkBuddy Workbench",
+    "description": "A right-sidebar workbench that hands tasks to the WorkBuddy desktop app on this machine, with model/skill picking, a live hand-off ledger, and concurrent job monitoring."
+  }
+}

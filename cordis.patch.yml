@@ -1,0 +1,8 @@
+# dsh-workbuddy bundle patch
+# 把「WorkBuddy 工作台」挂进 DSH 配置树。
+# 生效条件：patch 层在 startup 读取，因此改完需要重启一次 dsh web。
+# 回滚：删掉下面的 insert 行，或把本插件从 profile 的 package.json 里移除。
+
+- insert:
+    - id: workbuddy
+      name: 'dsh-workbuddy'
